@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        style="@style/ItemStyle.Image"
+        android:id="@+id/word_image_view"
+        tools:src="@drawable/ic_launcher_background"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:minHeight="@dimen/list_item_height"/>
+
+    <RelativeLayout
+        android:background="@color/category_numbers"
+        android:id="@+id/text_box"
+        style="@style/ItemStyle.TextBox"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/word_image_view">
+
+            <TextView
+                style="@style/ItemStyle.TextView.Header"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                tools:text="miwok"
+                android:id="@+id/miwok_text_view"/>
+
+            <TextView
+                style="@style/ItemStyle.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                tools:text="english"
+                android:id="@+id/default_text_view"
+                android:layout_below="@id/miwok_text_view"/>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/baseline_play_arrow_white_24"
+                />
+
+    </RelativeLayout>
+
+</RelativeLayout>
