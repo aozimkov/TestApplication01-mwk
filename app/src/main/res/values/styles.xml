@@ -5,6 +5,12 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primary_color</item>
         <item name="colorPrimaryDark">@color/primary_dark_color</item>
+        <item name="actionBarStyle">@style/CustomActionBar</item>
+    </style>
+    
+    <style name="CustomActionBar" parent="Base.Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="elevation">0dp</item>
+        <!-- remove shadow below ActionBar -->
     </style>
     
     <style name="CategoryStyle">
@@ -37,6 +43,13 @@
     <style name="ItemStyle.TextView.Header" parent="ItemStyle.TextView">
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">bottom</item>
+    </style>
+
+    <style name="Tabs" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/primary_color</item>
+        <item name="android:textColor">@color/tabs_font</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabIndicatorColor">@color/white</item>
     </style>
 
 </resources>

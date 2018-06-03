@@ -10,4 +10,5 @@
     <color name="category_phrases">#16AFCA</color>
     <!-- Fonts -->
     <color name="white">#FFFFFF</color>
+    <color name="tabs_font">#A8A19E</color>
 </resources>
