@@ -53,13 +53,13 @@ public class FamilyActivity extends AppCompatActivity {
                 mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
                     @Override
                     public void onAudioFocusChange(int focusChange) {
-                        if(focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
-                                focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK){
+                        if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
+                                focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
                             mMediaPlayer.pause();
                             mMediaPlayer.seekTo(0);
-                        } else if(focusChange == AudioManager.AUDIOFOCUS_LOSS){
+                        } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
                             mMediaPlayerReleaser();
-                        } else if(focusChange == AudioManager.AUDIOFOCUS_GAIN){
+                        } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
                             mMediaPlayer.start();
                         }
                     }
@@ -69,7 +69,7 @@ public class FamilyActivity extends AppCompatActivity {
                         AudioManager.STREAM_MUSIC,
                         AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
 
-                if(result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
 
                     mMediaPlayer = MediaPlayer.create(FamilyActivity.this, words.get(i).getmWordAudio());
                     mMediaPlayer.start();
@@ -91,8 +91,8 @@ public class FamilyActivity extends AppCompatActivity {
         mMediaPlayerReleaser();
     }
 
-    private void mMediaPlayerReleaser(){
-        if(mMediaPlayer != null){
+    private void mMediaPlayerReleaser() {
+        if (mMediaPlayer != null) {
             mMediaPlayer.release();
             mMediaPlayer = null;
             mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);

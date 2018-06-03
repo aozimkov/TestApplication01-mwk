@@ -17,16 +17,18 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".PhrasesActivity"
+        <activity
+            android:name=".PhrasesActivity"
             android:label="@string/category_phrases"
             android:parentActivityName=".MainActivity">
             <!-- this for support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".MainActivity" />
         </activity>
 
-        <activity android:name=".NumbersActivity"
+        <activity
+            android:name=".NumbersActivity"
             android:label="@string/category_numbers"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -34,7 +36,8 @@
                 android:value=".MainActivity" />
         </activity>
 
-        <activity android:name=".FamilyActivity"
+        <activity
+            android:name=".FamilyActivity"
             android:label="@string/category_family"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -42,7 +45,8 @@
                 android:value=".MainActivity" />
         </activity>
 
-        <activity android:name=".ColorsActivity"
+        <activity
+            android:name=".ColorsActivity"
             android:label="@string/category_colors"
             android:parentActivityName=".MainActivity">
             <meta-data
